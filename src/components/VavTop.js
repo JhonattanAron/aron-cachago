@@ -6,7 +6,7 @@ export default function NavTop(props) {
         return(
             <li key={index}>
                 <a key={index} href={data}>{data}</a>
-            </li>
+            </li>   
             )       
     })
     return (
