@@ -20,7 +20,7 @@ export default class MasSobreEventos extends Component{
 
     render(){
         return(
-            <div style={{padding: "45px"}}>
+            <div className="centerAll">
                 {/*Renderizado Condicional*/}
                 {this.loggedIn ? (<h3>Bienvenido Usuario Autenticado</h3>) : (<h3>El usuario aun no a entrado</h3>)}
                 <button onClick={this.handleClick}>Event</button>

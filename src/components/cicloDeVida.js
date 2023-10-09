@@ -65,12 +65,12 @@ export default class CicloVida extends Component {
     render() {
         console.log(4, 'El componente renderiza');
         return (
-            <>
+            <div className="centerAll">
                 <h1>Ciclo de Vida del Componente</h1>
                 {this.state.visible && <Relog hora={this.state.hora} />}
                 <button onClick={this.inicarRelog}>Iniciar</button>
                 <button onClick={this.detenerRelog}>Detener</button>
-            </>
+            </div>
 
         )
     }

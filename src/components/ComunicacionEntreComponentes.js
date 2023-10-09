@@ -15,11 +15,11 @@ export default class Padre extends Component {
 
     render() {
         return (
-            <>
+            <div className="centerAll">
                 <h2>Comunicacion entre components</h2>
                 <Hijo mensanje="Mensaje para el Hijo numero 1" />
                 <Hijo incremetarContador={this.incremetarContador} mensanje="Mensaje para el Hijo numero 2" />
-            </>
+            </div>
         )
     }
 }
