@@ -43,6 +43,10 @@ button:hover{
   display: flex;
   justify-content: space-around;
 }
+.pokemosCards{
+  display: flex;
+  flex-wrap: wrap;
+}
 .navTopLinks li{
   list-style: none;
 }
@@ -57,4 +61,7 @@ figure{
 figure figcaption{
   color: rgb(42, 97, 146);
   font-weight: 800;
+}
+.imgCharacter{
+  width: 120px;
 }

@@ -8,7 +8,7 @@ export default class AjaxApis extends Component {
 
     async componentDidMount() {
         try {
-            let url = 'https://pokeapi.co/api/v2/pokemon?limit=20'
+            let url = 'https://pokeapi.co/api/v2/pokemon?limit=200'
             const fetching = await fetch(url);
             const dataJson = await fetching.json();
             dataJson.results.map(async el => {
@@ -32,20 +32,22 @@ export default class AjaxApis extends Component {
 
     render() {
         return (
-            <div className='centerAll'>
+            <>
                 <h2>Peticiones Asincronas de Apis</h2>
-                {this.state.pokemons.length === 0 ? (<h3>Cargando......</h3>) : (
-                    this.state.pokemons.map((el , i) => {
-                        return (
-                            <Pokemon
-                                id={`pokemon${i + 1}`}
-                                key={i}
-                                avatar={el.avatar}
-                                name={el.name}
-                            />
-                        )
-                    }))}
-            </div>
+                <div className='pokemosCards'>
+                    {this.state.pokemons.length === 0 ? (<h3>Cargando......</h3>) : (
+                        this.state.pokemons.map((el, i) => {
+                            return (
+                                <Pokemon
+                                    id={`pokemon${i + 1}`}
+                                    key={i}
+                                    avatar={el.avatar}
+                                    name={el.name}
+                                />
+                            )
+                        }))}
+                </div>
+            </>
         )
     }
 }

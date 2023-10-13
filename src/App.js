@@ -1,5 +1,6 @@
 import './App.css';
 import AjaxApis from './components/AjaxApis';
+import AjaxHooks from './components/AjaxHooks';
 import Padre from './components/ComunicacionEntreComponentes';
 import MasSobreEventos from './components/MasSobreEventos';
 import NavTop from './components/VavTop';
@@ -23,6 +24,7 @@ function App() {
      <LineaH1 />
      <ContadorHooks />
      <LineaH1 />
+     <AjaxHooks />
     </>
   );
 }
