@@ -33,7 +33,8 @@ export default function AjaxHooks() {
         <div className="centerAll">
             <h2>Peticiones Asincronas en Hooks</h2>
             <div className="pokemosCards">
-                {rikAndMorthy.map((el)=> <Characters key={el.id}  name={el.name} image={el.image} /> )}
+                {rikAndMorthy.length === 0 ? (<h3>Cargando....</h3>) : (
+                rikAndMorthy.map((el)=> <Characters key={el.id}  name={el.name} image={el.image} /> ))}
             </div>
         </div>
     )
